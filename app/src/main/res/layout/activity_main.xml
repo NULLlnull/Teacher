@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="IP(多个IP使用  ,  分割)"
+        android:paddingLeft="10dp"
+        android:text="192.168.1.201,192.168.1.202,192.168.1.203,192.168.2.104" />
+
+    <RadioGroup
+        android:id="@+id/rg_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片" />
+
+        <RadioButton
+            android:id="@+id/rb_mv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频" />
+
+        <RadioButton
+            android:id="@+id/rb_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网页" />
+
+        <RadioButton
+            android:id="@+id/rb_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要发送的URL"
+        android:paddingLeft="15dp"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/sp_del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选择文件" />
+
+        <Button
+            android:id="@+id/btn_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选择文件(兼容模式)" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="当前选择的文件为："
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送文件" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="      发送文件为仅发送文件。没有删除原来的文件。如果要重新播放全新的内容请先删除文件"
+        android:textColor="#A9E61616"
+        android:textSize="15sp" />
+
+</LinearLayout>
